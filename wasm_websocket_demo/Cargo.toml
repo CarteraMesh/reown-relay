@@ -10,12 +10,16 @@ crate-type = ["cdylib"]
 
 [dependencies]
 anyhow = { workspace = true }
+console_error_panic_hook = { version = "0.1" }
 data-encoding = "2"
 futures = { workspace = true }
-rand = { workspace = true }
 getrandom = { version = "0.2", features = ["js"] }
+gloo-timers = { version = "0.3", features = ["futures"] }
+rand = { workspace = true }
+reown-relay-client = { path = "../client/" }
 wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
 wasm-bindgen-futures = "0.4"
+web-time = { version = "1", features = ["serde"] }
 web-sys = { version = "0.3", features = [
     "Element", "HtmlElement", "Window",
     "WebSocket", "console", "Event",
@@ -23,10 +27,7 @@ web-sys = { version = "0.3", features = [
     "DateTimeValue", "SubtleCrypto", "Performance",
     "TimeEvent"
 ] }
-reown-relay-client = { path = "../relay_client/" }
-console_error_panic_hook = { version = "0.1" }
-web-time = { version = "1", features = ["serde"] }
-gloo-timers = { version = "0.3", features = ["futures"] }
+
 
 [package.metadata.wasm-pack.profile.dev]
 wasm-bindgen = { debug-js-glue = true, demangle-name-section = true }
