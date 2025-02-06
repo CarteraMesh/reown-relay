@@ -14,7 +14,7 @@ default = ["tokio-tungstenite/native-tls", "tokio-tungstenite/url"]
 rustls = ["tokio-tungstenite/rustls-tls-native-roots", "tokio-tungstenite/url"]
 
 [dependencies]
-reown-relay-rpc = { path = "../rpc" }
+reown-relay-rpc = { path = "../rpc", version = "0.1.0-rc1" }
 futures-util = { workspace = true }
 thiserror = { workspace = true }
 serde = { workspace = true }
