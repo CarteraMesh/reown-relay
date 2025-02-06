@@ -1,9 +1,9 @@
 # Reown Relay Wasm Client
 
-Examples:
-- [HTTP client](examples/http_client.rs)
+
+## Examples
+
 - [WebSocket client](examples/websocket_client.rs)
-- [Webhook dispatch](examples/webhook.rs)
 
 ## `relay_client`
 
