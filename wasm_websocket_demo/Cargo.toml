@@ -5,17 +5,14 @@ edition = "2021"
 authors = ["WalletConnect Team"]
 license = "Apache-2.0"
 
-[build]
-target = "wasm32-unknown-uknown"
-
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-anyhow = "1"
+anyhow = { workspace = true }
 data-encoding = "2"
-futures = "0.3"
-rand = "0.8.5"
+futures = { workspace = true }
+rand = { workspace = true }
 getrandom = { version = "0.2", features = ["js"] }
 wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
 wasm-bindgen-futures = "0.4"
