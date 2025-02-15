@@ -9,6 +9,10 @@ description.workspace = true
 homepage.workspace = true
 keywords.workspace = true
 
+[package.metadata.release]
+sign-commit = true
+push-remote = "upstream"
+
 [features]
 default = ["tokio-tungstenite/native-tls", "tokio-tungstenite/url"]
 rustls = ["tokio-tungstenite/rustls-tls-native-roots", "tokio-tungstenite/url"]

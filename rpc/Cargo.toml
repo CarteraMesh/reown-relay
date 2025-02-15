@@ -9,6 +9,10 @@ description.workspace = true
 homepage.workspace = true
 keywords.workspace = true
 
+[package.metadata.release]
+sign-commit = true
+push-remote = "upstream"
+
 [dependencies]
 bs58 = {workspace = true }
 data-encoding = { workspace = true }
