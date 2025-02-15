@@ -15,7 +15,7 @@ members = ["client", "rpc", "wasm_websocket_demo"]
 
 [workspace.dependencies]
 anyhow = "1"
-bs58 = "0.4"
+bs58 = "0.5"
 chrono = { version = "0.4", default-features = false, features = [ "std",    "clock",    "wasmbind",    "wasm-bindgen",] }
 data-encoding = "2.3"
 derive_more = { version = "0.99", default-features = false, features = [    "display", "from", "as_ref", "as_mut" ] }
