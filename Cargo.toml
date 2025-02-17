@@ -18,7 +18,7 @@ anyhow = "1"
 bs58 = "0.5"
 chrono = { version = "0.4", default-features = false, features = [ "std",    "clock",    "wasmbind",    "wasm-bindgen",] }
 data-encoding = "2.3"
-derive_more = { version = "0.99", default-features = false, features = [    "display", "from", "as_ref", "as_mut" ] }
+derive_more = { version = "2.0", default-features = false, features = [    "display", "from", "as_ref", "as_mut" ] }
 ed25519-dalek = { version = "2.1.1", features = ["rand_core"] }
 futures-util = { version = "0.3", default-features = false, features = ["sink", "std"] }
 futures = { version = "0.3"}
