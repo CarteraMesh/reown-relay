@@ -159,13 +159,11 @@ impl FromStr for DecodedClientId {
             .strip_prefix(MULTICODEC_ED25519_BASE)
             .ok_or(ClientIdDecodingError::Base)?;
 
-        let mut decoded: [u8; TOTAL_DECODED_LENGTH] = [0; TOTAL_DECODED_LENGTH];
-
-        let decoded_len = bs58::decode(stripped)
-            .into(&mut decoded)
+        let decoded = bs58::decode(stripped)
+            .into_vec()
             .map_err(|_| ClientIdDecodingError::Encoding)?;
 
-        if decoded_len != TOTAL_DECODED_LENGTH {
+        if decoded.len() != TOTAL_DECODED_LENGTH {
             return Err(ClientIdDecodingError::Length);
         }
 
