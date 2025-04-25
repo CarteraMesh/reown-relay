@@ -14,7 +14,7 @@ anyhow = { workspace = true }
 console_error_panic_hook = { version = "0.1" }
 data-encoding = "2"
 futures = { workspace = true }
-getrandom = { version = "0.2", features = ["js"] }
+getrandom = { version = "0.3", features = ["js"] }
 gloo-timers = { version = "0.3", features = ["futures"] }
 rand = { workspace = true }
 reown-relay-client = { path = "../client/" }
